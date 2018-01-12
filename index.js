@@ -14,8 +14,8 @@ var dashboard = new ParseDashboard({
     {
       serverURL: process.env.SERVER_URL || 'https://localhost:1337/parse',
       appId: process.env.APP_ID || 'myAppId',
-      masterKey: process.env.MASTER_KEY || '',
-      "appName": "Tabby"
+      masterKey: process.env.MASTER_KEY || 'tk421',
+      "appName": "Tabby App"
     }
   ], "users": [
     {
