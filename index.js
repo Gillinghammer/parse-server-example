@@ -12,7 +12,7 @@ var options = { allowInsecureHTTP: true };
 var dashboard = new ParseDashboard({
   "apps": [
     {
-      serverURL: process.env.SERVER_URL || 'https://localhost:1337/parse',
+      serverURL: process.env.SERVER_URL || 'https://colingillingham.herokuapp.com/parse',
       appId: process.env.APP_ID || 'myAppId',
       masterKey: process.env.MASTER_KEY || 'tk421',
       "appName": "Tabby App"
