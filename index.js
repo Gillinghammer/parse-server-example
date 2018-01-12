@@ -12,9 +12,9 @@ var options = { allowInsecureHTTP: true };
 var dashboard = new ParseDashboard({
   "apps": [
     {
-      serverURL: process.env.SERVER_URL || 'https://colingillingham.herokuapp.com/parse',
+      serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',
       appId: process.env.APP_ID || 'myAppId',
-      masterKey: process.env.MASTER_KEY || 'tk421',
+      masterKey: process.env.MASTER_KEY || '',
       "appName": "Tabby App"
     }
   ], "users": [
@@ -35,7 +35,7 @@ var api = new ParseServer({
   databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID || 'myAppId',
-  masterKey: process.env.MASTER_KEY || 'tk421', //Add your master key here. Keep it secret!
+  masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
   serverURL: process.env.SERVER_URL || 'https://localhost:1337/parse',  // Don't forget to change to https if needed
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
@@ -59,7 +59,7 @@ app.use('/dashboard', dashboard);
 
 // Parse Server plays nicely with the rest of your web routes
 app.get('/', function(req, res) {
-  res.status(200).send('I dream of being a website.  Please star the parse-server repo on GitHub!');
+  res.status(200).send('Nothing to see here- move along...');
 });
 
 // There will be a test page available on the /test path of your server url
