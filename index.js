@@ -12,15 +12,15 @@ var options = { allowInsecureHTTP: true };
 var dashboard = new ParseDashboard({
   "apps": [
     {
-      "serverURL": "https://colingillingham.herokuapp.com/parse",
-      "appId": "myAppId",
-      "masterKey": "myMasterKey",
-      "appName": "MyApp"
+      serverURL: process.env.SERVER_URL || 'https://localhost:1337/parse',
+      appId: process.env.APP_ID || 'myAppId',
+      masterKey: process.env.MASTER_KEY || ''
+      "appName": "Tabby"
     }
   ], "users": [
     {
-      "user": "user",
-      "pass": "pass"
+      "user": "admin",
+      "pass": "admin"
     }
   ]
 }, options);
