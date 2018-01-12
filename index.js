@@ -12,7 +12,7 @@ var options = { allowInsecureHTTP: true };
 var dashboard = new ParseDashboard({
   "apps": [
     {
-      "serverURL": "https://localhost:1337/parse",
+      "serverURL": "https://colingillingham.herokuapp.com/parse",
       "appId": "myAppId",
       "masterKey": "myMasterKey",
       "appName": "MyApp"
