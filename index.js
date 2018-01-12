@@ -6,7 +6,7 @@ var ParseServer = require('parse-server').ParseServer;
 var ParseDashboard = require('parse-dashboard');
 var path = require('path');
 
-var options = { allowInsecureHTTP: false };
+var options = { allowInsecureHTTP: true };
 
 
 var dashboard = new ParseDashboard({
